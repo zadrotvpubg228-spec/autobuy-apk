@@ -11,41 +11,51 @@
     --green: #1fd17a; --yellow: #f5b727; --text: #f3f4f8; --muted: #8b8fa3;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
-  body { background: var(--bg); color: var(--text); padding-bottom: 86px; min-height: 100vh; }
-  .topbar { position: sticky; top: 0; z-index: 20; background: rgba(11,11,15,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: 12px 14px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  body { background: var(--bg); color: var(--text); padding-bottom: 88px; min-height: 100vh; }
+  .topbar { position: sticky; top: 0; z-index: 20; background: rgba(11,11,15,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: 11px 14px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
   .money { font-size: 20px; font-weight: 800; color: var(--green); }
-  .sub-info { font-size: 12px; color: var(--muted); }
+  .sub-info { font-size: 11px; color: var(--muted); }
   .time-box { text-align: right; }
-  .time-main { font-size: 14px; font-weight: 700; color: #fff; }
-  .energy-bar { width: 96px; height: 6px; background: #232330; border-radius: 99px; overflow: hidden; margin-top: 4px; margin-left: auto; }
+  .time-main { font-size: 13px; font-weight: 700; color: #fff; }
+  .energy-bar { width: 94px; height: 6px; background: #232330; border-radius: 99px; overflow: hidden; margin-top: 4px; margin-left: auto; }
   .energy-fill { height: 100%; background: linear-gradient(90deg, var(--accent), #ff4d67); transition: width 0.25s; }
-  .container { padding: 12px 14px; max-width: 540px; margin: 0 auto; }
-  .section-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .container { padding: 12px 14px; max-width: 560px; margin: 0 auto; }
+  .section-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; gap: 8px; }
   .section-title h2 { font-size: 17px; font-weight: 800; }
-  .pill { font-size: 11px; padding: 4px 8px; border-radius: 8px; background: var(--card2); color: var(--muted); border: 1px solid var(--border); }
+  .pill { font-size: 11px; padding: 4px 8px; border-radius: 8px; background: var(--card2); color: var(--muted); border: 1px solid var(--border); white-space: nowrap; }
   .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 13px; margin-bottom: 11px; box-shadow: 0 6px 18px rgba(0,0,0,0.35); }
   .dm-card { border-left: 3px solid var(--accent); }
+  .order-card { border-left: 3px solid var(--yellow); }
+  .rare-card { border: 1px solid rgba(245,183,39,0.55); }
+  .admin-card { border: 1px solid var(--accent); background: #171016; }
+  .car-visual { position: relative; width: 100%; height: 112px; border-radius: 11px; overflow: hidden; background: linear-gradient(180deg, #181824 0%, #101017 100%); border: 1px solid #262636; margin: 9px 0 6px; display: flex; align-items: center; justify-content: center; }
+  .car-visual img.real-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2; }
+  .car-visual svg.body-art { position: relative; z-index: 1; width: 92%; height: 96px; }
+  .visual-caption { position: absolute; bottom: 6px; left: 8px; z-index: 3; font-size: 10px; font-weight: 700; background: rgba(11,11,15,0.78); padding: 2px 7px; border-radius: 6px; color: #e6e8f2; }
   .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
-  .car-name { font-size: 16px; font-weight: 800; color: #fff; }
+  .car-name { font-size: 15px; font-weight: 800; color: #fff; }
   .car-year { font-size: 12px; color: var(--muted); margin-top: 2px; }
   .price-tag { font-size: 17px; font-weight: 800; color: var(--green); white-space: nowrap; }
   .market-ref { font-size: 11px; color: var(--muted); text-align: right; }
   .msg-bubble { background: var(--card2); border: 1px solid #2b2b3d; border-radius: 12px; padding: 10px 12px; margin: 9px 0; font-size: 13px; line-height: 1.4; color: #eceef5; }
   .offer-highlight { color: var(--yellow); font-weight: 800; font-size: 15px; }
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 7px 0; }
   .tag { font-size: 11px; padding: 3px 8px; border-radius: 7px; background: var(--card2); color: #d5d8e6; }
   .tag.bad { background: rgba(229,25,55,0.16); color: #ff6b81; border: 1px solid rgba(229,25,55,0.35); }
   .tag.good { background: rgba(31,209,122,0.14); color: #4ce89b; }
   .tag.warn { background: rgba(245,183,39,0.14); color: #ffd166; }
-  .cond-row { display: flex; align-items: center; gap: 8px; margin: 8px 0; font-size: 12px; color: var(--muted); }
+  .cond-row { display: flex; align-items: center; gap: 8px; margin: 7px 0; font-size: 12px; color: var(--muted); }
   .cond-track { flex: 1; height: 7px; background: #232331; border-radius: 99px; overflow: hidden; }
   .cond-fill { height: 100%; border-radius: 99px; transition: width 0.25s; }
-  .btn-row { display: flex; gap: 8px; margin-top: 9px; }
-  button { border: none; border-radius: 10px; padding: 10px 11px; font-size: 13px; font-weight: 700; cursor: pointer; transition: transform 0.08s, opacity 0.15s; flex: 1; }
-  button:active { transform: scale(0.97); }
+  .btn-row { display: flex; gap: 8px; margin-top: 8px; }
+  button, input, select, a.channel-btn { border-radius: 10px; font-size: 13px; }
+  button, a.channel-btn { border: none; padding: 10px 10px; font-weight: 700; cursor: pointer; transition: transform 0.08s, opacity 0.15s; flex: 1; text-decoration: none; text-align: center; display: inline-block; }
+  button:active, a.channel-btn:active { transform: scale(0.97); }
+  input, select { width: 100%; background: var(--card2); color: #fff; border: 1px solid #303042; padding: 10px 12px; outline: none; }
   .btn-primary { background: var(--accent); color: #fff; box-shadow: 0 4px 14px var(--accent-glow); }
   .btn-secondary { background: var(--card2); color: #fff; border: 1px solid #303042; }
   .btn-green { background: var(--green); color: #06180f; }
+  .btn-yellow { background: var(--yellow); color: #1b1302; }
   .btn-disabled { opacity: 0.45; pointer-events: none; }
   .toast { position: fixed; top: 68px; left: 50%; transform: translateX(-50%); background: #1d1d29; border: 1px solid var(--accent); color: #fff; padding: 10px 14px; border-radius: 12px; font-size: 13px; font-weight: 600; z-index: 50; max-width: 92%; text-align: center; box-shadow: 0 8px 24px rgba(0,0,0,0.6); display: none; }
   .navbar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 30; background: #101017; border-top: 1px solid var(--border); display: flex; justify-content: space-around; padding: 8px 4px 12px; }
@@ -57,13 +67,14 @@
   .stat-box { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 11px; }
   .stat-val { font-size: 17px; font-weight: 800; margin-top: 3px; }
   .log-item { font-size: 12px; color: var(--muted); padding: 7px 0; border-bottom: 1px solid #1e1e29; }
+  .ach-item { font-size: 12px; padding: 6px 0; border-bottom: 1px solid #1e1e29; display: flex; justify-content: space-between; gap: 8px; }
 </style>
 </head>
 <body>
 <div class="topbar">
   <div>
     <div class="money" id="ui-money">$2,000</div>
-    <div class="sub-info" id="ui-rank">Перекуп • Ур. 1 (0 сделок)</div>
+    <div class="sub-info" id="ui-rank">Ур. 1 • Реп. 10 • 0 сделок</div>
   </div>
   <div class="time-box">
     <div class="time-main" id="ui-time">День 1 • 09:00</div>
@@ -82,22 +93,39 @@
 </div>
 
 <script>
-const CAR_POOL = [
-  { name: "ВАЗ 2106 Классика", year: 1991, market: 1150, tier: 1 },
-  { name: "ВАЗ 21099 Самара", year: 2001, market: 1650, tier: 1 },
-  { name: "ВАЗ 2114 Хэтч", year: 2008, market: 2300, tier: 1 },
-  { name: "Daewoo Lanos 1.5", year: 2007, market: 2900, tier: 1 },
-  { name: "Chevrolet Aveo", year: 2008, market: 3800, tier: 1 },
-  { name: "Volkswagen Golf IV", year: 2002, market: 4600, tier: 1 },
-  { name: "Skoda Octavia Tour", year: 2006, market: 5600, tier: 2 },
-  { name: "Honda Civic 4D", year: 2008, market: 7400, tier: 2 },
-  { name: "Toyota Camry 40", year: 2009, market: 10200, tier: 2 },
-  { name: "BMW E34 540i", year: 1995, market: 11800, tier: 2 },
-  { name: "2019 Ford Fusion 2.0 AWD", year: 2019, market: 15800, tier: 2 },
-  { name: "2019 Ford Fusion V6 Sport", year: 2019, market: 19500, tier: 3 },
-  { name: "BMW M5 F90 Competition", year: 2020, market: 68000, tier: 3 },
-  { name: "Mercedes-AMG GLE 63 S", year: 2021, market: 84000, tier: 3 }
+const ADMIN_CODE = "228777";
+const CHANNEL_URL = "https://t.me/legendfirst";
+
+const MAKES_MODELS = [
+  { make: "ВАЗ", model: "2106 Классика", body: "lada_classic", color: "#b93829", minY: 1984, maxY: 2001, base: 1150, tier: 1, photoUrl: "" },
+  { make: "ВАЗ", model: "2107 Семёрка", body: "lada_classic", color: "#2d5a88", minY: 1990, maxY: 2012, base: 1450, tier: 1, photoUrl: "" },
+  { make: "ВАЗ", model: "21099 Самара", body: "lada_fwd", color: "#262833", minY: 1994, maxY: 2004, base: 1700, tier: 1, photoUrl: "" },
+  { make: "ВАЗ", model: "2114 Хэтч", body: "hatch", color: "#6c7587", minY: 2005, maxY: 2013, base: 2350, tier: 1, photoUrl: "" },
+  { make: "Daewoo", model: "Lanos 1.5", body: "sedan", color: "#4d6b53", minY: 2003, maxY: 2012, base: 2950, tier: 1, photoUrl: "" },
+  { make: "Chevrolet", model: "Aveo T250", body: "sedan", color: "#8c93a4", minY: 2006, maxY: 2011, base: 3850, tier: 1, photoUrl: "" },
+  { make: "Volkswagen", model: "Golf IV 1.6", body: "hatch", color: "#28384f", minY: 1999, maxY: 2005, base: 4700, tier: 1, photoUrl: "" },
+  { make: "Skoda", model: "Octavia Tour", body: "sedan", color: "#cfd5e0", minY: 2002, maxY: 2010, base: 5700, tier: 2, photoUrl: "" },
+  { make: "Honda", model: "Civic 4D", body: "sedan", color: "#36455c", minY: 2006, maxY: 2011, base: 7400, tier: 2, photoUrl: "" },
+  { make: "Toyota", model: "Camry XV40", body: "sedan", color: "#1f222a", minY: 2006, maxY: 2011, base: 10300, tier: 2, photoUrl: "" },
+  { make: "BMW", model: "E34 540i", body: "sedan", color: "#1c2536", minY: 1992, maxY: 1996, base: 12200, tier: 2, photoUrl: "" },
+  { make: "Ford", model: "Fusion 2.0 AWD", body: "sedan", color: "#3b4252", minY: 2015, maxY: 2020, base: 15600, tier: 2, photoUrl: "" },
+  { make: "Ford", model: "Fusion V6 Sport", body: "sport_coupe", color: "#b81d33", minY: 2017, maxY: 2019, base: 19800, tier: 3, photoUrl: "" },
+  { make: "Audi", model: "S4 B8 3.0 TFSI", body: "sport_coupe", color: "#9aa3b2", minY: 2010, maxY: 2015, base: 24500, tier: 3, photoUrl: "" },
+  { make: "Porsche", model: "Cayenne GTS", body: "suv_luxury", color: "#7a1c28", minY: 2008, maxY: 2014, base: 29000, tier: 3, photoUrl: "" },
+  { make: "BMW", model: "M5 F90 Competition", body: "sport_coupe", color: "#181a20", minY: 2018, maxY: 2022, base: 69000, tier: 3, photoUrl: "" },
+  { make: "Mercedes-AMG", model: "GLE 63 S", body: "suv_luxury", color: "#23262f", minY: 2019, maxY: 2023, base: 86000, tier: 3, photoUrl: "" }
 ];
+
+const TRIMS = ["Base", "Comfort", "Sport Line", "R-Spec", "Limited", "GT Pack"];
+const COLORS_EXTRA = ["Чёрный металлик", "Тёмно-красный", "Серебро", "Графит", "Белый перламутр", "Синий"];
+const COLOR_MAP = {
+  "Чёрный металлик": "#1b1d24",
+  "Тёмно-красный": "#9e1b2d",
+  "Серебро": "#b4bccb",
+  "Графит": "#49505e",
+  "Белый перламутр": "#e4e7ee",
+  "Синий": "#274c77"
+};
 
 const ISSUES = [
   { id: "rust", label: "Рыжики по порогам", fixCost: 180, penalty: 280 },
@@ -107,45 +135,66 @@ const ISSUES = [
   { id: "elec", label: "Ошибка по электрике", fixCost: 210, penalty: 320 }
 ];
 
+const HISTORY_RISKS = [
+  { tag: "Скручен пробег", penaltyRatio: 0.08 },
+  { tag: "Был удар в морду", penaltyRatio: 0.1 },
+  { tag: "Несколько владельцев", penaltyRatio: 0.04 }
+];
+
 const BUYERS = [
   { name: "Артём", vibe: "перекуп с района", lines: ["Брат, вижу в гараже {car}. Наликом прям щас дам {offer}, забираю?", "Здарова, по {car} есть вариант — отдам {offer} на руки без лишних слов."] },
   { name: "Макс", vibe: "ищет под проект", lines: ["Привет! Давно ищу {car} под себя. Могу выкатить {offer}, по рукам?", "Слушай, {car} зацепил глаз. Больше {offer} не потяну, но деньги на руках."] },
   { name: "Денис", vibe: "торгуется жёстко", lines: ["Бро, рынок сейчас просел, за {car} даю {offer}. Думаешь?", "Смотрел похожие, красная цена твоей {car} с учётом дел — {offer}."] },
-  { name: "Руслан", vibe: "ценитель бодрых тачек", lines: ["Ровный аппарат {car}. Готов забрать за {offer}, если отдашь сегодня.", "Если по {car} не заломишь космос — забираю за {offer}."] }
+  { name: "Руслан", vibe: "берёт только сегодня", lines: ["Ровный аппарат {car}. Готов забрать за {offer}, но только сегодня — завтра уеду к другому!", "Если по {car} не заломишь космос — забираю сегодня за {offer}."] }
+];
+
+const CLIENT_ORDERS = [
+  { id: "ord_tier1", title: "Заказ: бюджетный флип", desc: "Нужна машина класса эконом/классика (до $6,500) в состоянии от 70%.", bonus: 450, match: c => c.market <= 6500 && c.cond >= 70 },
+  { id: "ord_sport", title: "Заказ: бодрый спорт/седан", desc: "Ищут тачку от $10,000 с тюнингом или состоянием от 80%.", bonus: 1400, match: c => c.market >= 10000 && (c.tuned || c.cond >= 80) },
+  { id: "ord_suv", title: "Заказ: люкс / SUV", desc: "Клиент просит статусный авто от $22,000 в хорошем состоянии.", bonus: 2600, match: c => c.market >= 22000 && c.cond >= 75 }
+];
+
+const ACHIEVEMENTS = [
+  { id: "first_flip", title: "Первый флип", desc: "Совершить 1 сделку", check: s => s.deals >= 1 },
+  { id: "ten_deals", title: "Опытный перекуп", desc: "Совершить 10 сделок", check: s => s.deals >= 10 },
+  { id: "big_cut", title: "Жирный куш", desc: "Заработать +$3,000 за одну сделку", check: s => s.bestDeal >= 3000 },
+  { id: "bankroll", title: "Капиталист", desc: "Накопить $50,000 на балансе", check: s => s.money >= 50000 }
 ];
 
 const DEFAULT_STATE = {
-  money: 2000, day: 1, hour: 9, energy: 100, deals: 0, profitTotal: 0, bestDeal: 0,
+  money: 2000, debt: 0, rep: 10, day: 1, hour: 9, energy: 100,
+  deals: 0, profitTotal: 0, bestDeal: 0,
   garageSlots: 3, tab: "garage",
-  logs: ["Старт: $2,000 в кармане и 2 Жигули в гараже."],
+  adminUnlocked: false, showAdminPrompt: false,
+  lastMarketDay: 0,
+  activeOrder: null,
+  logs: ["Старт: $2,000 в кармане и 2 Жигули в гараже. Рынок обновляется раз в новый день."],
   garage: [
-    { uid: 1, name: "ВАЗ 2107 Семёрка", year: 1998, market: 1350, boughtFor: 900, cond: 64, inspected: true, listed: false, listPrice: 0, issues: [{ id: "rust", label: "Рыжики по порогам", fixCost: 180, penalty: 280 }] },
-    { uid: 2, name: "ВАЗ 2109 Зубило", year: 2003, market: 1750, boughtFor: 1200, cond: 71, inspected: false, listed: false, listPrice: 0, issues: [{ id: "susp", label: "Стучит ходовая", fixCost: 240, penalty: 360 }] }
+    { uid: 1, name: "ВАЗ 2107 Семёрка", body: "lada_classic", year: 1998, km: 184000, color: "Тёмно-красный", hex: "#9e1b2d", photoUrl: "", market: 1400, boughtFor: 900, repairSpent: 0, tuneSpent: 0, cond: 64, tuned: false, inspected: true, listed: false, listPrice: 0, rare: false, risk: null, issues: [{ id: "rust", label: "Рыжики по порогам", fixCost: 180, penalty: 280 }] },
+    { uid: 2, name: "ВАЗ 21099 Самара", body: "lada_fwd", year: 2002, km: 212000, color: "Чёрный металлик", hex: "#1b1d24", photoUrl: "", market: 1750, boughtFor: 1200, repairSpent: 0, tuneSpent: 0, cond: 71, tuned: false, inspected: false, listed: false, listPrice: 0, rare: false, risk: { tag: "Скручен пробег", penaltyRatio: 0.08 }, issues: [{ id: "susp", label: "Стучит ходовая", fixCost: 240, penalty: 360 }] }
   ],
   market: [],
   messages: []
 };
 
 let state = loadState();
-if (!state.market || state.market.length === 0) {
-  generateMarket();
-  spawnBuyerOffer(true);
-  saveState();
-}
+ensureDailyMarket(true);
+if (!state.activeOrder) pickClientOrder();
+if (!state.messages.length) spawnBuyerOffer(true);
+saveState();
 
 function loadState() {
   try {
-    const raw = localStorage.getItem("autobuy_save_v2");
+    const raw = localStorage.getItem("autobuy_save_v5");
     const parsed = raw ? JSON.parse(raw) : JSON.parse(JSON.stringify(DEFAULT_STATE));
-    if (!parsed.messages) parsed.messages = [];
-    return parsed;
+    return Object.assign(JSON.parse(JSON.stringify(DEFAULT_STATE)), parsed);
   } catch (e) {
     return JSON.parse(JSON.stringify(DEFAULT_STATE));
   }
 }
 
 function saveState() {
-  localStorage.setItem("autobuy_save_v2", JSON.stringify(state));
+  localStorage.setItem("autobuy_save_v5", JSON.stringify(state));
 }
 
 function fmt(n) {
@@ -162,90 +211,235 @@ function toast(msg) {
 
 function addLog(text) {
   state.logs.unshift(`День ${state.day}, ${String(state.hour).padStart(2, "0")}:00 — ${text}`);
-  if (state.logs.length > 25) state.logs.pop();
+  if (state.logs.length > 35) state.logs.pop();
 }
 
 function getLevel() {
   return Math.floor(state.deals / 3) + 1;
 }
 
+function getLevelBonusMult() {
+  return 1 + Math.min(0.25, (getLevel() - 1) * 0.03);
+}
+
+function pickClientOrder() {
+  const pick = CLIENT_ORDERS[Math.floor(Math.random() * CLIENT_ORDERS.length)];
+  state.activeOrder = { id: pick.id, title: pick.title, desc: pick.desc, bonus: pick.bonus, done: false };
+}
+
+function renderCarVisual(car) {
+  const c = car.hex || COLOR_MAP[car.color] || "#3b4252";
+  const spoiler = car.tuned ? `<rect x="24" y="34" width="22" height="5" rx="2" fill="#e51937"/><rect x="33" y="39" width="4" height="7" fill="#111"/>` : ``;
+  const rustMark = car.issues && car.issues.length ? `<circle cx="155" cy="68" r="6" fill="rgba(180,83,9,0.65)"/><circle cx="164" cy="70" r="4" fill="rgba(146,64,14,0.65)"/>` : ``;
+
+  let bodyPath = `<path d="M36 68 L52 46 L112 44 L156 54 L216 58 L226 70 L226 80 L28 80 Z" fill="${c}" stroke="#0b0b0f" stroke-width="2"/>`;
+  let cabinPath = `<path d="M62 47 L84 26 L142 26 L172 47 Z" fill="#18202c" stroke="#0b0b0f" stroke-width="2"/>`;
+
+  if (car.body === "lada_classic") {
+    bodyPath = `<path d="M26 74 L28 46 L144 46 L228 54 L228 76 L26 76 Z" fill="${c}" stroke="#0b0b0f" stroke-width="2"/>`;
+    cabinPath = `<path d="M54 46 L72 23 L140 23 L158 46 Z" fill="#17202b" stroke="#0b0b0f" stroke-width="2"/>`;
+  } else if (car.body === "lada_fwd") {
+    bodyPath = `<path d="M26 75 L34 45 L146 44 L228 55 L228 76 L26 76 Z" fill="${c}" stroke="#0b0b0f" stroke-width="2"/>`;
+    cabinPath = `<path d="M56 45 L78 24 L144 24 L164 44 Z" fill="#17202b" stroke="#0b0b0f" stroke-width="2"/>`;
+  } else if (car.body === "hatch") {
+    bodyPath = `<path d="M28 75 L46 27 L146 27 L176 52 L226 58 L226 76 L28 76 Z" fill="${c}" stroke="#0b0b0f" stroke-width="2"/>`;
+    cabinPath = `<path d="M54 32 L140 32 L164 51 L46 51 Z" fill="#17202b" stroke="#0b0b0f" stroke-width="2"/>`;
+  } else if (car.body === "sport_coupe") {
+    bodyPath = `<path d="M22 75 L44 50 L106 42 L166 49 L230 58 L226 76 L22 76 Z" fill="${c}" stroke="#0b0b0f" stroke-width="2"/>`;
+    cabinPath = `<path d="M68 46 L102 25 L154 27 L178 49 Z" fill="#141923" stroke="#0b0b0f" stroke-width="2"/>`;
+  } else if (car.body === "suv_luxury") {
+    bodyPath = `<path d="M24 76 L32 22 L168 22 L192 50 L230 55 L228 76 L24 76 Z" fill="${c}" stroke="#0b0b0f" stroke-width="2"/>`;
+    cabinPath = `<path d="M44 28 L160 28 L182 49 L40 49 Z" fill="#151b24" stroke="#0b0b0f" stroke-width="2"/>`;
+  }
+
+  const photoHtml = car.photoUrl
+    ? `<img class="real-photo" src="${car.photoUrl}" alt="${car.name}" onerror="this.style.display='none'">`
+    : ``;
+
+  const typeLabelMap = {
+    lada_classic: "Классика • Седан",
+    lada_fwd: "Передний привод • Седан",
+    hatch: "Хэтчбек",
+    sedan: "Седан",
+    sport_coupe: "Спорт-кузов",
+    suv_luxury: "SUV / Внедорожник"
+  };
+
+  return `
+  <div class="car-visual">
+    ${photoHtml}
+    <svg class="body-art" viewBox="0 0 256 96" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="128" cy="84" rx="102" ry="7" fill="rgba(0,0,0,0.45)"/>
+      ${spoiler}
+      ${bodyPath}
+      ${cabinPath}
+      ${rustMark}
+      <circle cx="72" cy="76" r="14" fill="#111318" stroke="#8b8fa3" stroke-width="3"/>
+      <circle cx="72" cy="76" r="6" fill="#d0d5e2"/>
+      <circle cx="192" cy="76" r="14" fill="#111318" stroke="#8b8fa3" stroke-width="3"/>
+      <circle cx="192" cy="76" r="6" fill="#d0d5e2"/>
+      <rect x="218" y="59" width="9" height="6" rx="2" fill="#fff3b0"/>
+      <rect x="27" y="56" width="7" height="7" rx="1.5" fill="#ff3b5c"/>
+    </svg>
+    <div class="visual-caption">${typeLabelMap[car.body] || "Авто"} • ${car.color}</div>
+  </div>`;
+}
+
+function createGeneratedCar(forceTier = null, isRare = false) {
+  const lvl = getLevel();
+  const maxTier = forceTier || (lvl >= 5 ? 3 : (lvl >= 2 ? 2 : 1));
+  const candidates = MAKES_MODELS.filter(c => c.tier <= maxTier);
+  const base = candidates[Math.floor(Math.random() * candidates.length)];
+  const year = Math.floor(base.minY + Math.random() * (base.maxY - base.minY + 1));
+  const trim = TRIMS[Math.floor(Math.random() * TRIMS.length)];
+  const color = COLORS_EXTRA[Math.floor(Math.random() * COLORS_EXTRA.length)];
+  const hex = COLOR_MAP[color] || base.color;
+  const age = Math.max(1, 2026 - year);
+  const km = Math.max(12000, Math.round((age * (8500 + Math.random() * 14000)) / 1000) * 1000);
+  const cond = Math.floor(42 + Math.random() * 55);
+  const rareFlag = isRare || Math.random() < 0.16;
+  const trimMult = rareFlag ? 1.18 : (0.94 + Math.random() * 0.14);
+  const kmMult = Math.max(0.68, 1.06 - (km / 450000) * 0.25);
+  const market = Math.max(400, Math.round((base.base * trimMult * kmMult) / 10) * 10);
+
+  const issues = [];
+  if (Math.random() < (rareFlag ? 0.45 : 0.68)) {
+    issues.push(ISSUES[Math.floor(Math.random() * ISSUES.length)]);
+  }
+  const risk = Math.random() < 0.35 ? HISTORY_RISKS[Math.floor(Math.random() * HISTORY_RISKS.length)] : null;
+  const discount = rareFlag ? (0.74 + Math.random() * 0.18) : (0.65 + Math.random() * 0.24);
+  const askPrice = Math.max(250, Math.round((market * discount) / 10) * 10);
+
+  return {
+    uid: Date.now() + Math.random(),
+    name: `${base.make} ${base.model} (${trim})`,
+    body: base.body,
+    photoUrl: base.photoUrl || "",
+    year,
+    km,
+    color,
+    hex,
+    market,
+    askPrice,
+    cond,
+    tuned: false,
+    inspected: false,
+    bargained: false,
+    rare: rareFlag,
+    risk,
+    issues
+  };
+}
+
+function ensureDailyMarket(forceFirst = false) {
+  if (forceFirst || state.lastMarketDay !== state.day) {
+    state.messages.forEach(m => {
+      if (m.status === "pending" && m.urgent) {
+        m.status = "expired";
+        m.unread = false;
+      }
+    });
+    const list = [createGeneratedCar(null, true)];
+    for (let i = 1; i < 6; i++) {
+      list.push(createGeneratedCar(null, false));
+    }
+    state.market = list;
+    state.lastMarketDay = state.day;
+    if (!forceFirst) {
+      pickClientOrder();
+      if (Math.random() < 0.25 && state.money >= 300) {
+        const fine = 150;
+        state.money -= fine;
+        addLog(`Расходы на стоянку/оформление: -${fmt(fine)}`);
+      }
+    }
+  }
+}
+
 function calcFairSellPrice(car) {
-  let val = car.market * (0.72 + (car.cond / 100) * 0.34);
+  const kmFactor = Math.max(0.75, 1.04 - (car.km / 500000) * 0.2);
+  const repFactor = 1 + Math.min(0.15, Math.max(-0.08, (state.rep - 10) * 0.003));
+  let val = car.market * kmFactor * repFactor * getLevelBonusMult() * (0.72 + (car.cond / 100) * 0.34);
+  if (car.tuned) val *= 1.14;
+  if (car.rare) val *= 1.08;
+  if (car.risk) val *= (1 - car.risk.penaltyRatio);
   car.issues.forEach(iss => { val -= iss.penalty; });
   return Math.max(250, Math.round(val / 10) * 10);
 }
 
 function spawnBuyerOffer(force = false) {
   if (!state.garage.length) return;
-  if (!force && Math.random() > 0.58) return;
+  if (!force && Math.random() > 0.55) return;
   const activeOffers = state.messages.filter(m => m.status === "pending").length;
-  if (activeOffers >= 5) return;
+  if (activeOffers >= 6) return;
 
   const car = state.garage[Math.floor(Math.random() * state.garage.length)];
   const alreadyHasOffer = state.messages.some(m => m.status === "pending" && m.carUid === car.uid);
   if (alreadyHasOffer && !force) return;
 
   const buyer = BUYERS[Math.floor(Math.random() * BUYERS.length)];
+  const urgent = buyer.vibe === "берёт только сегодня";
   const baseFair = car.listed && car.listPrice > 0 ? car.listPrice : calcFairSellPrice(car);
-  const mult = 0.84 + Math.random() * 0.24;
+  const mult = urgent ? (0.9 + Math.random() * 0.22) : (0.85 + Math.random() * 0.25);
   const offer = Math.max(200, Math.round((baseFair * mult) / 10) * 10);
   const tpl = buyer.lines[Math.floor(Math.random() * buyer.lines.length)];
   const text = tpl.replace("{car}", car.name).replace("{offer}", fmt(offer));
 
   state.messages.unshift({
     id: Date.now() + Math.random(),
-    buyerName: buyer.name, vibe: buyer.vibe, carUid: car.uid, carName: car.name,
-    offer: offer, counterCount: 0, text: text, unread: true, status: "pending",
+    buyerName: buyer.name, vibe: buyer.vibe, urgent, carUid: car.uid, carName: car.name,
+    offer, counterCount: 0, text, unread: true, status: "pending",
     timeLabel: `День ${state.day}, ${String(state.hour).padStart(2, "0")}:00`
   });
-  if (!force) toast(`💬 Новое СМС от ${buyer.name}: хочет ${car.name} за ${fmt(offer)}`);
+  if (!force) toast(`💬 Новое СМС от ${buyer.name}: ${fmt(offer)} за ${car.name}`);
+}
+
+function advanceToNextDay() {
+  state.day += 1;
+  state.hour = 9;
+  state.energy = 100;
+  if (state.debt > 0) {
+    const interest = Math.max(25, Math.round(state.debt * 0.05));
+    state.debt += interest;
+    addLog(`Начислен % по займу: +${fmt(interest)} (долг: ${fmt(state.debt)})`);
+  }
+  processOvernightSales();
+  ensureDailyMarket(false);
+  spawnBuyerOffer(true);
 }
 
 function spendTime(hours, energyCost) {
   if (state.energy < energyCost) {
-    toast("Ты вымотан! Иди во вкладку «Сон», чтобы поспать.");
+    toast("Ты вымотан! Поспи до утра во вкладке «Сон».");
     return false;
   }
   state.energy = Math.max(0, state.energy - energyCost);
   state.hour += hours;
   while (state.hour >= 24) {
     state.hour -= 24;
-    state.day += 1;
-    processOvernightSales();
+    advanceToNextDay();
+  }
+  if (state.market.length > 2 && Math.random() < 0.22) {
+    const stolenIdx = Math.floor(Math.random() * state.market.length);
+    const stolen = state.market[stolenIdx];
+    state.market.splice(stolenIdx, 1);
+    toast(`⚡ Конкурент перехватил ${stolen.name}!`);
   }
   spawnBuyerOffer(false);
   return true;
 }
 
-function generateMarket() {
-  const lvl = getLevel();
-  const maxTier = lvl >= 4 ? 3 : (lvl >= 2 ? 2 : 1);
-  const pool = CAR_POOL.filter(c => c.tier <= maxTier);
-  const list = [];
-  for (let i = 0; i < 6; i++) {
-    const base = pool[Math.floor(Math.random() * pool.length)];
-    const cond = Math.floor(48 + Math.random() * 48);
-    const hidden = [];
-    if (Math.random() < 0.65) hidden.push(ISSUES[Math.floor(Math.random() * ISSUES.length)]);
-    const discount = 0.68 + Math.random() * 0.24;
-    const ask = Math.round((base.market * discount) / 10) * 10;
-    list.push({
-      uid: Date.now() + i + Math.random(),
-      name: base.name, year: base.year, market: base.market, askPrice: ask,
-      cond: cond, inspected: false, bargained: false, issues: hidden
-    });
-  }
-  state.market = list;
-}
-
 function inspectMarketCar(idx) {
   const car = state.market[idx];
   if (!car || car.inspected) return;
-  if (state.money < 40) return toast("Нужно $40 на толщиномер и проверку!");
+  if (state.money < 40) return toast("Нужно $40 на толщиномер и диагностику!");
   if (!spendTime(1, 8)) return;
   state.money -= 40;
   car.inspected = true;
-  toast(car.issues.length ? `Нашли косяк: ${car.issues[0].label}` : "Тачка чистая, без скрытых косяков!");
+  const info = [];
+  if (car.issues.length) info.push(car.issues[0].label);
+  if (car.risk) info.push(car.risk.tag);
+  toast(info.length ? `Нашли: ${info.join(" + ")}` : "Тачка чистая, без косяков и сюрпризов!");
   saveState(); render();
 }
 
@@ -254,12 +448,13 @@ function bargainCar(idx) {
   if (!car || car.bargained) return;
   if (!spendTime(1, 10)) return;
   car.bargained = true;
-  if (Math.random() < 0.72) {
+  const chance = Math.min(0.9, 0.7 + (getLevel() - 1) * 0.03);
+  if (Math.random() < chance) {
     const drop = Math.round((car.askPrice * (0.06 + Math.random() * 0.08)) / 10) * 10;
-    car.askPrice = Math.max(300, car.askPrice - drop);
+    car.askPrice = Math.max(250, car.askPrice - drop);
     toast(`Сторговал -${fmt(drop)}! Новая цена: ${fmt(car.askPrice)}`);
   } else {
-    toast("Продавец упёрся: «Без торга, брат, цена и так низ рынка».");
+    toast("Продавец упёрся: «Без торга, брат».");
   }
   saveState(); render();
 }
@@ -267,17 +462,21 @@ function bargainCar(idx) {
 function buyCar(idx) {
   const car = state.market[idx];
   if (!car) return;
-  if (state.garage.length >= state.garageSlots) return toast("В гараже нет мест! Продай тачку или расширь гараж.");
-  if (state.money < car.askPrice) return toast("Не хватает баксов на покупку!");
+  if (state.garage.length >= state.garageSlots) return toast("В гараже нет мест! Продай тачку или расширь бокс.");
+  const extraFee = (car.cond < 55 && Math.random() < 0.35) ? 90 : 0;
+  const totalNeed = car.askPrice + extraFee;
+  if (state.money < totalNeed) return toast(`Не хватает ${fmt(totalNeed)} на покупку!`);
   if (!spendTime(1, 10)) return;
-  state.money -= car.askPrice;
+  state.money -= totalNeed;
   state.garage.push({
-    uid: car.uid, name: car.name, year: car.year, market: car.market,
-    boughtFor: car.askPrice, cond: car.cond, inspected: true, listed: false, listPrice: 0, issues: car.issues
+    uid: car.uid, name: car.name, body: car.body, photoUrl: car.photoUrl || "",
+    year: car.year, km: car.km, color: car.color, hex: car.hex,
+    market: car.market, boughtFor: totalNeed, repairSpent: 0, tuneSpent: 0, cond: car.cond, tuned: false,
+    inspected: true, listed: false, listPrice: 0, rare: car.rare, risk: car.risk, issues: car.issues
   });
   state.market.splice(idx, 1);
-  addLog(`Купил ${car.name} за ${fmt(car.askPrice)}`);
-  toast(`Куплено: ${car.name} загнана в гараж!`);
+  addLog(`Купил ${car.name} (${car.year}) за ${fmt(totalNeed)}${extraFee ? " + эвакуатор $90" : ""}`);
+  toast(extraFee ? `Куплено + $90 эвакуатор за состояние!` : `Куплено: ${car.name} в гараже!`);
   saveState(); render();
 }
 
@@ -285,20 +484,52 @@ function repairCar(idx) {
   const car = state.garage[idx];
   if (!car || car.listed) return;
   const issue = car.issues[0];
-  const cost = issue ? issue.fixCost : Math.round(car.market * 0.07);
+  const baseCost = issue ? issue.fixCost : Math.round(car.market * 0.07);
+  const discount = Math.max(0.85, 1 - (getLevel() - 1) * 0.02);
+  const cost = Math.max(40, Math.round(baseCost * discount));
   if (state.money < cost) return toast(`Не хватает ${fmt(cost)} на сервис!`);
   if (!spendTime(2, 15)) return;
   state.money -= cost;
   car.boughtFor += cost;
+  car.repairSpent = (car.repairSpent || 0) + cost;
   if (issue) {
     car.issues.shift();
     car.cond = Math.min(100, car.cond + 14);
     toast(`Устранили: ${issue.label} (-${fmt(cost)})`);
   } else {
     car.cond = Math.min(100, car.cond + 18);
-    toast(`Полировка и ТО выполнены (-${fmt(cost)})`);
+    toast(`Детейлинг и ТО выполнены (-${fmt(cost)})`);
   }
   saveState(); render();
+}
+
+function tuneCar(idx) {
+  const car = state.garage[idx];
+  if (!car || car.listed || car.tuned) return;
+  const cost = Math.max(250, Math.round(car.market * 0.1));
+  if (state.money < cost) return toast(`Нужно ${fmt(cost)} на тюнинг/стейдж!`);
+  if (!spendTime(2, 14)) return;
+  state.money -= cost;
+  car.boughtFor += cost;
+  car.tuneSpent = (car.tuneSpent || 0) + cost;
+  car.tuned = true;
+  car.cond = Math.min(100, car.cond + 6);
+  addLog(`Сделал тюнинг на ${car.name} (-${fmt(cost)})`);
+  toast(`Тюнинг установлен! Вид и цена выросли.`);
+  saveState(); render();
+}
+
+function checkOrderBonus(car) {
+  const ord = state.activeOrder;
+  const def = CLIENT_ORDERS.find(o => o.id === ord?.id);
+  if (ord && !ord.done && def && def.match(car)) {
+    ord.done = true;
+    state.money += ord.bonus;
+    state.profitTotal += ord.bonus;
+    state.rep += 3;
+    addLog(`Выполнил заказ клиента (${ord.title}): бонус +${fmt(ord.bonus)}`);
+    toast(`🎯 Заказ выполнен! Бонус +${fmt(ord.bonus)}`);
+  }
 }
 
 function acceptSms(msgId) {
@@ -316,7 +547,9 @@ function acceptSms(msgId) {
   state.money += msg.offer;
   state.deals += 1;
   state.profitTotal += profit;
+  state.rep += profit >= 0 ? 2 : -1;
   if (profit > state.bestDeal) state.bestDeal = profit;
+  checkOrderBonus(car);
   state.garage.splice(gIdx, 1);
   msg.status = "accepted";
   msg.unread = false;
@@ -327,7 +560,7 @@ function acceptSms(msgId) {
   });
   const sign = profit >= 0 ? `+${fmt(profit)}` : `-${fmt(Math.abs(profit))}`;
   addLog(`СМС-сделка с ${msg.buyerName}: ${car.name} за ${fmt(msg.offer)} (${sign})`);
-  toast(`Сделка! ${msg.buyerName} забрал ${car.name} за ${fmt(msg.offer)} (${sign})`);
+  toast(`Сделка! ${msg.buyerName} забрал ${car.name} (${sign})`);
   saveState(); render();
 }
 
@@ -379,7 +612,7 @@ function listForSale(idx, mult) {
   const price = Math.round((calcFairSellPrice(car) * mult) / 10) * 10;
   car.listed = true;
   car.listPrice = price;
-  toast(`Выставил ${car.name} на площадку за ${fmt(price)}`);
+  toast(`Выставил ${car.name} на продажу за ${fmt(price)}`);
   saveState(); render();
 }
 
@@ -389,7 +622,9 @@ function finishSale(idx, price, mode) {
   state.money += price;
   state.deals += 1;
   state.profitTotal += profit;
+  state.rep += profit >= 0 ? 2 : -1;
   if (profit > state.bestDeal) state.bestDeal = profit;
+  checkOrderBonus(car);
   state.garage.splice(idx, 1);
   state.messages.forEach(m => {
     if (m.status === "pending" && m.carUid === car.uid) { m.status = "expired"; m.unread = false; }
@@ -407,19 +642,14 @@ function processOvernightSales() {
     const fair = calcFairSellPrice(car);
     const ratio = car.listPrice / Math.max(1, fair);
     const chance = ratio <= 1.02 ? 0.82 : (ratio <= 1.12 ? 0.52 : 0.25);
-    if (Math.random() < chance) finishSale(i, car.listPrice, "Автопродажа");
+    if (Math.random() < chance) finishSale(i, car.listPrice, "Ночная продажа");
   }
 }
 
 function sleepUntilMorning() {
-  state.day += 1;
-  state.hour = 9;
-  state.energy = 100;
-  processOvernightSales();
-  generateMarket();
-  spawnBuyerOffer(true);
-  addLog("Проснулся. Рынок обновился, в личку могли написать покупатели.");
-  toast(`Доброе утро! День ${state.day}, бодрость 100%.`);
+  advanceToNextDay();
+  addLog("Проснулся до утра. Новый день, новый рынок и свежие СМС.");
+  toast(`Доброе утро! Наступил День ${state.day}.`);
   saveState(); render();
 }
 
@@ -433,11 +663,115 @@ function expandGarage() {
   saveState(); render();
 }
 
+function takeLoan(amount) {
+  if (state.debt + amount > 25000) return toast("Лимит займа $25,000!");
+  state.money += amount;
+  state.debt += amount;
+  addLog(`Взял займ +${fmt(amount)} (+5% каждый новый день)`);
+  toast(`Получено ${fmt(amount)} в долг.`);
+  saveState(); render();
+}
+
+function repayLoan() {
+  if (state.debt <= 0) return toast("Долгов нет!");
+  const pay = Math.min(state.debt, state.money);
+  if (pay <= 0) return toast("Не хватает средств для погашения!");
+  state.money -= pay;
+  state.debt -= pay;
+  addLog(`Погасил долг на ${fmt(pay)}`);
+  toast(`Погашено ${fmt(pay)}. Остаток долга: ${fmt(state.debt)}.`);
+  saveState(); render();
+}
+
+function verifyAdminCode() {
+  const inp = document.getElementById("admin-code-input");
+  if (!inp) return;
+  if (inp.value.trim() === ADMIN_CODE) {
+    state.adminUnlocked = true;
+    state.showAdminPrompt = false;
+    toast("🔓 Админ-панель открыта!");
+  } else {
+    toast("Неверный код.");
+  }
+  saveState(); render();
+}
+
+function adminGiveMoney(amount) {
+  state.money += amount;
+  addLog(`[АДМИН] Выдано ${fmt(amount)}`);
+  toast(`+${fmt(amount)} на баланс`);
+  saveState(); render();
+}
+
+function adminSpawnCar() {
+  const sel = document.getElementById("admin-car-select");
+  const idx = sel ? Number(sel.value) : 0;
+  const base = MAKES_MODELS[idx] || MAKES_MODELS[0];
+  if (state.garage.length >= state.garageSlots) state.garageSlots += 1;
+  state.garage.push({
+    uid: Date.now() + Math.random(),
+    name: `${base.make} ${base.model} (Admin Spec)`,
+    body: base.body,
+    photoUrl: base.photoUrl || "",
+    year: base.maxY,
+    km: 15000,
+    color: "Чёрный металлик",
+    hex: "#1b1d24",
+    market: base.base,
+    boughtFor: 0,
+    repairSpent: 0,
+    tuneSpent: 0,
+    cond: 100,
+    tuned: true,
+    inspected: true,
+    listed: false,
+    listPrice: 0,
+    rare: true,
+    risk: null,
+    issues: []
+  });
+  addLog(`[АДМИН] Добавил ${base.make} ${base.model} в гараж`);
+  toast(`Добавлено в гараж: ${base.make} ${base.model}`);
+  saveState(); render();
+}
+
+function adminNextDay() {
+  advanceToNextDay();
+  addLog(`[АДМИН] Перемотал на День ${state.day}`);
+  toast(`Перемотано на День ${state.day}`);
+  saveState(); render();
+}
+
+function exportSaveCode() {
+  const code = btoa(unescape(encodeURIComponent(JSON.stringify(state))));
+  const area = document.getElementById("save-io-box");
+  if (area) {
+    area.value = code;
+    area.select();
+    toast("Код сохранения сгенерирован в поле ниже.");
+  }
+}
+
+function importSaveCode() {
+  const area = document.getElementById("save-io-box");
+  if (!area || !area.value.trim()) return toast("Вставь код сохранения в поле!");
+  try {
+    const raw = decodeURIComponent(escape(atob(area.value.trim())));
+    const parsed = JSON.parse(raw);
+    state = Object.assign(JSON.parse(JSON.stringify(DEFAULT_STATE)), parsed);
+    saveState(); render();
+    toast("Сохранение загружено!");
+  } catch (e) {
+    toast("Ошибка формата кода сохранения.");
+  }
+}
+
 function resetGame() {
-  if (!confirm("Сбросить прогресс и начать заново с $2,000 и 2 Жигули?")) return;
-  localStorage.removeItem("autobuy_save_v2");
-    state = JSON.parse(JSON.stringify(DEFAULT_STATE));
-  generateMarket();
+  if (!confirm("Сбросить прогресс и начать заново с $2,000?")) return;
+  localStorage.removeItem("autobuy_save_v5");
+  state = JSON.parse(JSON.stringify(DEFAULT_STATE));
+  ensureDailyMarket(true);
+  pickClientOrder();
   spawnBuyerOffer(true);
   saveState(); render();
 }
@@ -450,7 +784,7 @@ function setTab(t) {
 
 function render() {
   document.getElementById("ui-money").textContent = fmt(state.money);
-  document.getElementById("ui-rank").textContent = `Перекуп • Ур. ${getLevel()} (${state.deals} сделок)`;
+  document.getElementById("ui-rank").textContent = `Ур. ${getLevel()} • Реп. ${state.rep} • ${state.deals} сделок`;
   document.getElementById("ui-time").textContent = `День ${state.day} • ${String(state.hour).padStart(2, "0")}:00`;
   document.getElementById("ui-energy-text").textContent = `Бодрость: ${state.energy}%`;
   document.getElementById("ui-energy-bar").style.width = `${state.energy}%`;
@@ -466,29 +800,44 @@ function render() {
 
   const app = document.getElementById("app");
   if (state.tab === "market") {
-    let html = `<div class="section-title"><h2>Авторынок</h2><span class="pill">Гараж: ${state.garage.length}/${state.garageSlots}</span></div>`;
+    let html = `<div class="section-title"><h2>Авторынок (День ${state.day})</h2><span class="pill">Гараж: ${state.garage.length}/${state.garageSlots}</span></div>`;
+    if (state.activeOrder) {
+      html += `
+      <div class="card order-card">
+        <div class="card-head">
+          <div>
+            <div class="car-name">${state.activeOrder.title}</div>
+            <div class="car-year">${state.activeOrder.desc}</div>
+          </div>
+          <span class="tag ${state.activeOrder.done?'good':'warn'}">${state.activeOrder.done?'✓ Выполнено':'+'+fmt(state.activeOrder.bonus)}</span>
+        </div>
+      </div>`;
+    }
     state.market.forEach((c, i) => {
       const condColor = c.cond >= 80 ? "var(--green)" : (c.cond >= 60 ? "var(--yellow)" : "var(--accent)");
       html += `
-      <div class="card">
+      <div class="card ${c.rare ? 'rare-card' : ''}">
         <div class="card-head">
           <div>
-            <div class="car-name">${c.name}</div>
-            <div class="car-year">${c.year} г. • Осмотр: ${c.inspected ? "пройдена" : "не проверялась"}</div>
+            <div class="car-name">${c.rare ? '⭐ ' : ''}${c.name}</div>
+            <div class="car-year">${c.year} г. • ${Math.round(c.km/1000)} тыс. км</div>
           </div>
           <div>
             <div class="price-tag">${fmt(c.askPrice)}</div>
             <div class="market-ref">Рынок ~${fmt(c.market)}</div>
           </div>
         </div>
+        ${renderCarVisual(c)}
         <div class="cond-row">
           <span>Состояние ${c.cond}%</span>
           <div class="cond-track"><div class="cond-fill" style="width:${c.cond}%;background:${condColor}"></div></div>
         </div>
         <div class="tags">
+          ${c.rare ? `<span class="tag warn">★ Редкий лот дня</span>` : ``}
           ${c.inspected
-            ? (c.issues.length ? `<span class="tag bad">⚠ ${c.issues[0].label}</span>` : `<span class="tag good">✓ Без скрытых косяков</span>`)
-            : `<span class="tag warn">? Возможны скрытые косяки</span>`}
+            ? (c.issues.length ? `<span class="tag bad">⚠ ${c.issues[0].label}</span>` : `<span class="tag good">✓ Без тех. косяков</span>`)
+            : `<span class="tag warn">? Диагностика не проведена</span>`}
+          ${c.inspected && c.risk ? `<span class="tag bad">🕵 ${c.risk.tag}</span>` : ``}
           ${c.bargained ? `<span class="tag">Торг проведён</span>` : ``}
         </div>
         <div class="btn-row">
@@ -503,31 +852,37 @@ function render() {
     const slotCost = state.garageSlots * 1800;
     let html = `<div class="section-title"><h2>Мой гараж (${state.garage.length}/${state.garageSlots})</h2><button class="btn-secondary" style="flex:0;white-space:nowrap;padding:6px 10px" onclick="expandGarage()">+Место (${fmt(slotCost)})</button></div>`;
     if (!state.garage.length) {
-      html += `<div class="card">В гараже пусто. Загляни на вкладку <b>Рынок</b> и выцепи тачку ниже рынка!</div>`;
+      html += `<div class="card">В гараже пусто. Загляни на вкладку <b>Рынок</b> и возьми тачку ниже рынка.</div>`;
     }
     state.garage.forEach((c, i) => {
       const fair = calcFairSellPrice(c);
       const estProfit = fair - c.boughtFor;
-      const fixCost = c.issues[0] ? c.issues[0].fixCost : Math.round(c.market * 0.07);
+      const baseFix = c.issues[0] ? c.issues[0].fixCost : Math.round(c.market * 0.07);
+      const fixCost = Math.max(40, Math.round(baseFix * Math.max(0.85, 1 - (getLevel() - 1) * 0.02)));
       const fixLabel = c.issues[0] ? `Починить (${fmt(fixCost)})` : `Детейлинг (${fmt(fixCost)})`;
+      const tuneCost = Math.max(250, Math.round(c.market * 0.1));
       html += `
-      <div class="card">
+      <div class="card ${c.rare ? 'rare-card' : ''}">
         <div class="card-head">
           <div>
-            <div class="car-name">${c.name}</div>
-            <div class="car-year">${c.year} г. • Вложено: ${fmt(c.boughtFor)}</div>
+            <div class="car-name">${c.rare ? '⭐ ' : ''}${c.name}</div>
+            <div class="car-year">${c.year} г. • ${Math.round(c.km/1000)} тыс. км • Вложено: ${fmt(c.boughtFor)}</div>
           </div>
           <div>
             <div class="price-tag">${fmt(fair)}</div>
             <div class="market-ref" style="color:${estProfit>=0?'var(--green)':'#ff6b81'}">Оценка: ${estProfit>=0?'+':''}${fmt(estProfit)}</div>
           </div>
         </div>
+        ${renderCarVisual(c)}
+        <div class="car-year">Ремонт: ${fmt(c.repairSpent || 0)} • Тюнинг: ${fmt(c.tuneSpent || 0)}</div>
         <div class="cond-row">
           <span>Состояние ${c.cond}%</span>
           <div class="cond-track"><div class="cond-fill" style="width:${c.cond}%;background:var(--green)"></div></div>
         </div>
         <div class="tags">
           ${c.issues.length ? `<span class="tag bad">⚠ ${c.issues[0].label}</span>` : `<span class="tag good">✓ Готова к продаже</span>`}
+          ${c.risk ? `<span class="tag bad">🕵 ${c.risk.tag}</span>` : ``}
+          ${c.tuned ? `<span class="tag warn">⚡ Тюнинг + Спойлер</span>` : ``}
           ${c.listed ? `<span class="tag warn">На продаже за ${fmt(c.listPrice)}</span>` : ``}
         </div>
         ${c.listed ? `
@@ -538,9 +893,10 @@ function render() {
         ` : `
           <div class="btn-row">
             <button class="btn-secondary ${c.cond>=100 && !c.issues.length ? 'btn-disabled' : ''}" onclick="repairCar(${i})">${fixLabel}</button>
-            <button class="btn-primary" onclick="listForSale(${i}, 1.06)">На продажу (${fmt(Math.round(fair*1.06/10)*10)})</button>
+            <button class="btn-secondary ${c.tuned ? 'btn-disabled' : ''}" onclick="tuneCar(${i})">Тюнинг (${fmt(tuneCost)})</button>
           </div>
           <div class="btn-row">
+            <button class="btn-primary" onclick="listForSale(${i}, 1.06)">На продажу (${fmt(Math.round(fair*1.06/10)*10)})</button>
             <button class="btn-green" onclick="quickSell(${i})">Быстрый выкуп (${fmt(Math.round(fair*0.88/10)*10)})</button>
           </div>
         `}
@@ -551,7 +907,7 @@ function render() {
     const pending = state.messages.filter(m => m.status === "pending").length;
     let html = `<div class="section-title"><h2>Личка / СМС</h2><span class="pill">Активных: ${pending}</span></div>`;
     if (!state.messages.length) {
-      html += `<div class="card">Пока тишина. Делай действия на рынке, в гараже или поспи — покупатели сами напишут.</div>`;
+      html += `<div class="card">Пока тишина. Действуй на рынке, в гараже или перейди на следующий день.</div>`;
     }
     state.messages.forEach(m => {
       const car = state.garage.find(c => c.uid === m.carUid);
@@ -561,7 +917,7 @@ function render() {
       <div class="card dm-card">
         <div class="card-head">
           <div>
-            <div class="car-name">${m.buyerName} <span class="tag">${m.vibe}</span></div>
+            <div class="car-name">${m.buyerName} <span class="tag ${m.urgent?'warn':''}">${m.vibe}</span></div>
             <div class="car-year">${m.timeLabel} • Авто: <b>${m.carName}</b></div>
           </div>
           <div>
@@ -572,14 +928,14 @@ function render() {
         <div class="msg-bubble">«${m.text}»</div>
         ${m.status === "pending" ? `
           <div class="btn-row">
-            <button class="btn-green" onclick="acceptSms(${m.id})">Да (продать)</button>
+            <button class="btn-green" onclick="acceptSms(${m.id})">Да</button>
             <button class="btn-secondary" onclick="counterSms(${m.id})">Дороже</button>
             <button class="btn-primary" onclick="declineSms(${m.id})">Нет</button>
           </div>
         ` : `
           <div class="tags">
             <span class="tag ${m.status==='accepted'?'good':'bad'}">
-              ${m.status==='accepted'?'✓ Продано по СМС':(m.status==='declined'?'✕ Отказано / закрыто':'• Неактуально')}
+              ${m.status==='accepted'?'✓ Продано по СМС':(m.status==='declined'?'✕ Отказано / закрыто':'• Срок вышел')}
             </span>
           </div>
         `}
@@ -590,37 +946,93 @@ function render() {
     app.innerHTML = `
       <div class="section-title"><h2>Режим дня и сна</h2><span class="pill">День ${state.day}</span></div>
       <div class="card">
-        <div class="car-name">Лёг спать до утра (09:00)</div>
+        <div class="car-name">Переход на следующий день (09:00)</div>
         <div class="car-year" style="margin:8px 0 12px;line-height:1.45">
           • Восстанавливает <b>бодрость до 100%</b>.<br>
-          • Обновляет авторынок и приносит новые СМС от покупателей.<br>
-          • Выставленные на продажу тачки могут уйти за ночь.
+          • Обновляет авторынок и заказ клиента на новый день.<br>
+          • Приносит новые СМС от покупателей и ночные продажи.<br>
+          • По займу начисляется +5% в сутки.
         </div>
-        <button class="btn-primary" style="width:100%" onclick="sleepUntilMorning()">😴 Спать до утра (День ${state.day + 1})</button>
+        <button class="btn-primary" style="width:100%" onclick="sleepUntilMorning()">🌙 Спать до утра (День ${state.day + 1})</button>
       </div>
       <div class="card">
         <div class="car-name" style="margin-bottom:6px">История сделок и событий</div>
         ${state.logs.map(l => `<div class="log-item">${l}</div>`).join("")}
       </div>`;
   } else {
+    const achHtml = ACHIEVEMENTS.map(a => {
+      const done = a.check(state);
+      return `<div class="ach-item"><div><b>${a.title}</b> — <span style="color:var(--muted)">${a.desc}</span></div><span class="tag ${done?'good':''}">${done?'Открыто':'В процессе'}</span></div>`;
+    }).join("");
+
+    const carOptions = MAKES_MODELS.map((m, i) => `<option value="${i}">${m.make} ${m.model} (${fmt(m.base)})</option>`).join("");
+
+    let adminBlock = "";
+    if (state.adminUnlocked) {
+      adminBlock = `
+      <div class="card admin-card">
+        <div class="car-name" style="color:#ff6b81;margin-bottom:8px">🛠 Админ-панель</div>
+        <div class="btn-row">
+          <button class="btn-green" onclick="adminGiveMoney(10000)">+$10,000</button>
+          <button class="btn-green" onclick="adminGiveMoney(100000)">+$100,000</button>
+          <button class="btn-yellow" onclick="adminNextDay()">+1 День</button>
+        </div>
+        <div class="btn-row" style="margin-top:10px">
+          <select id="admin-car-select">${carOptions}</select>
+          <button class="btn-primary" style="flex:0;white-space:nowrap" onclick="adminSpawnCar()">В гараж</button>
+        </div>
+      </div>`;
+    } else if (state.showAdminPrompt) {
+      adminBlock = `
+      <div class="card admin-card">
+        <div class="car-name" style="margin-bottom:8px">Ввод кода админ-панели</div>
+        <div class="btn-row">
+          <input id="admin-code-input" type="password" placeholder="Введите код...">
+          <button class="btn-primary" style="flex:0;white-space:nowrap" onclick="verifyAdminCode()">Открыть</button>
+        </div>
+      </div>`;
+    }
+
     app.innerHTML = `
-      <div class="section-title"><h2>Профиль перекупа</h2><span class="pill">Уровень ${getLevel()}</span></div>
+      <div class="section-title"><h2>Профиль перекупа</h2><span class="pill">Ур. ${getLevel()} • Реп. ${state.rep}</span></div>
       <div class="stat-grid">
         <div class="stat-box"><div class="sub-info">Баланс</div><div class="stat-val" style="color:var(--green)">${fmt(state.money)}</div></div>
+        <div class="stat-box"><div class="sub-info">Долг по займу</div><div class="stat-val" style="color:${state.debt>0?'#ff6b81':'var(--muted)'}">${fmt(state.debt)}</div></div>
         <div class="stat-box"><div class="sub-info">Всего сделок</div><div class="stat-val">${state.deals}</div></div>
-        <div class="stat-box"><div class="sub-info">Чистый профит</div><div class="stat-val">${fmt(state.profitTotal)}</div></div>
         <div class="stat-box"><div class="sub-info">Лучший куш</div><div class="stat-val" style="color:var(--yellow)">${fmt(state.bestDeal)}</div></div>
       </div>
       <div class="card">
-        <div class="car-name" style="margin-bottom:6px">Подсказки перекупа</div>
-        <div class="car-year" style="line-height:1.45">
-          • Вкладка <b>СМС</b> — покупатели пишут сами. Можешь сразу нажать <b>Да</b>, <b>Дороже</b> (до 2 раз) или <b>Нет</b>.<br>
-          • Проверяй тачки на рынке за <b>$40</b>, чтобы не попасть на дорогой ремонт коробки или мотора.
+        <div class="car-name" style="margin-bottom:6px">Наш Telegram-канал</div>
+        <div class="car-year" style="margin-bottom:8px">Подписывайся на обновления и движ перекупов:</div>
+        <div class="btn-row">
+          <a class="channel-btn btn-primary" href="${CHANNEL_URL}" target="_blank" rel="noopener noreferrer">📢 Перейти в @legendfirst</a>
         </div>
-        <div class="btn-row" style="margin-top:12px">
-          <button class="btn-secondary" onclick="resetGame()">Сбросить сохранение</button>
+      </div>
+      <div class="card">
+        <div class="car-name" style="margin-bottom:6px">Быстрый займ (под 5%/день)</div>
+        <div class="btn-row">
+          <button class="btn-secondary" onclick="takeLoan(2000)">Взять $2,000</button>
+          <button class="btn-secondary" onclick="takeLoan(5000)">Взять $5,000</button>
+          <button class="btn-green ${state.debt<=0?'btn-disabled':''}" onclick="repayLoan()">Погасить</button>
         </div>
-      </div>`;
+      </div>
+      <div class="card">
+        <div class="car-name" style="margin-bottom:6px">Достижения</div>
+        ${achHtml}
+      </div>
+      <div class="card">
+        <div class="car-name" style="margin-bottom:6px">Экспорт / импорт сейва</div>
+        <textarea id="save-io-box" rows="2" style="width:100%;background:var(--card2);color:#fff;border:1px solid #303042;border-radius:10px;padding:8px;font-size:11px" placeholder="Код сохранения..."></textarea>
+        <div class="btn-row">
+          <button class="btn-secondary" onclick="exportSaveCode()">Экспорт</button>
+          <button class="btn-secondary" onclick="importSaveCode()">Импорт</button>
+        </div>
+        <div class="btn-row" style="margin-top:10px">
+          <button class="btn-secondary" onclick="state.showAdminPrompt=!state.showAdminPrompt;saveState();render()">🔑 Ввести код доступа</button>
+          <button class="btn-primary" onclick="resetGame()">Сброс</button>
+        </div>
+      </div>
+      ${adminBlock}`;
   }
 }
 
